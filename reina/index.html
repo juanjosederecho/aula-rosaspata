@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10272b">
+  <meta name="description" content="Sílabo personalizado de Biología para Reina, 4.º de secundaria de Rosaspata, Puno: 12 módulos semanales en tres meses.">
+  <title>Biología para Reina · Rosaspata 4A</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2310272b'/%3E%3Cpath d='M43 14C27 15 17 23 18 36c1 11 11 16 19 10 8-6 11-18 6-31Z' fill='%23c1da4a'/%3E%3Cpath d='M18 47c7-10 13-17 24-25' fill='none' stroke='%2310272b' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #14292b;
+      --ink-soft: #405456;
+      --deep: #10272b;
+      --teal: #146c68;
+      --teal-bright: #d9eeea;
+      --lime: #c6dc60;
+      --coral: #d67753;
+      --paper: #f1f4ee;
+      --card: #fffefa;
+      --line: #dce3dc;
+      --muted: #687876;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--paper);
+      scroll-behavior: smooth;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 320px; background: var(--paper); }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    .skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 20; padding: .75rem 1rem; background: white; color: var(--deep); border-radius: .5rem; }
+    .skip-link:focus { top: 1rem; }
+    .topbar { position: relative; z-index: 5; min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0 clamp(1rem, 5vw, 5rem); background: var(--deep); color: #f7f8f1; }
+    .brand { display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; font-weight: 720; letter-spacing: -.02em; }
+    .brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid rgba(198,220,96,.55); border-radius: 50%; color: var(--lime); }
+    .brand-mark svg { width: 19px; height: 19px; }
+    .brand small { display: block; margin-top: .08rem; color: #bdcbc3; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; }
+    .topnav { display: flex; align-items: center; gap: clamp(.8rem, 2vw, 2rem); }
+    .topnav a { color: #e2e9e2; font-size: .9rem; text-decoration: none; }
+    .topnav a:hover, .topnav a:focus-visible { color: var(--lime); }
+    .topnav .nav-cta { padding: .72rem 1rem; color: var(--deep); background: var(--lime); border-radius: 999px; font-weight: 750; }
+    .hero { position: relative; min-height: min(690px, 78vw); min-height: clamp(500px, 67vw, 690px); display: grid; align-items: end; overflow: hidden; color: white; background: var(--deep) url("assets/lago-titicaca-amanecer.png") center 53% / cover no-repeat; }
+    .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(9,31,34,.91) 0%, rgba(9,31,34,.72) 38%, rgba(9,31,34,.2) 75%), linear-gradient(0deg, rgba(9,31,34,.58), transparent 48%); }
+    .hero-inner { position: relative; width: min(1200px, 100%); margin: 0 auto; padding: clamp(3.5rem, 8vw, 6.8rem) clamp(1.25rem, 5vw, 5rem); display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 2rem; }
+    .eyebrow { display: inline-flex; align-items: center; gap: .65rem; color: var(--lime); font-size: .76rem; font-weight: 760; letter-spacing: .16em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--lime); }
+    h1 { max-width: 760px; margin: 1rem 0 1rem; font-size: clamp(3.3rem, 8vw, 6.5rem); line-height: .97; letter-spacing: -.065em; font-weight: 580; }
+    h1 em { color: var(--lime); font-family: var(--serif); font-weight: 400; }
+    .hero-copy { max-width: 590px; margin: 0; color: #e1e9e1; font-size: clamp(1.05rem, 1.8vw, 1.25rem); line-height: 1.65; }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 1.7rem; }
+    .button { display: inline-flex; align-items: center; gap: .6rem; min-height: 48px; padding: .75rem 1.2rem; border-radius: 999px; text-decoration: none; font-size: .96rem; font-weight: 760; transition: transform .2s ease, background .2s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: var(--deep); background: var(--lime); }
+    .button-primary:hover { background: #d9ec7b; }
+    .hero-note { align-self: end; width: 185px; padding: 1.1rem 1.2rem; border: 1px solid rgba(255,255,255,.38); border-radius: 1rem; background: rgba(9,31,34,.37); backdrop-filter: blur(10px); }
+    .hero-note strong { display: block; color: var(--lime); font-family: var(--serif); font-size: 2.5rem; line-height: 1; font-weight: 500; }
+    .hero-note span { display: block; margin-top: .55rem; color: #edf2e9; font-size: .85rem; line-height: 1.5; }
+    .hero-caption { position: absolute; right: clamp(1rem, 5vw, 5rem); top: 1.4rem; color: rgba(255,255,255,.8); font-size: .73rem; letter-spacing: .08em; text-transform: uppercase; }
+    .wrap { width: min(1150px, calc(100% - 2.5rem)); margin-inline: auto; }
+    .intro { padding: clamp(3.5rem, 7vw, 6rem) 0 3rem; }
+    .section-kicker { margin: 0 0 .75rem; color: var(--teal); font-size: .77rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 800; }
+    h2 { margin: 0; font-family: var(--serif); font-size: clamp(2.3rem, 5vw, 4rem); font-weight: 500; line-height: 1.08; letter-spacing: -.04em; }
+    .section-lede { max-width: 700px; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.7; }
+    .competencies { display: grid; grid-template-columns: repeat(3, 1fr); gap: .85rem; margin-top: 2rem; }
+    .competency { padding: 1.35rem; border: 1px solid var(--line); border-radius: 1rem; background: rgba(255,254,250,.72); }
+    .competency-num { color: var(--coral); font-family: var(--serif); font-size: 1.15rem; }
+    .competency h3 { margin: .55rem 0 .5rem; font-size: 1.07rem; line-height: 1.35; }
+    .competency p { margin: 0; color: var(--muted); font-size: .94rem; line-height: 1.6; }
+    .field-note { display: grid; grid-template-columns: 1fr 1.05fr; overflow: hidden; margin: 1.25rem 0 clamp(4rem, 8vw, 7rem); border-radius: 1.35rem; background: var(--deep); color: #f6f6ed; }
+    .field-note img { width: 100%; height: 100%; min-height: 300px; object-fit: cover; }
+    .field-copy { align-self: center; padding: clamp(1.5rem, 4vw, 3.5rem); }
+    .field-copy .section-kicker { color: var(--lime); }
+    .field-copy h2 { max-width: 450px; font-size: clamp(2rem, 4vw, 3rem); }
+    .field-copy p { max-width: 480px; color: #d3ded8; font-size: 1rem; line-height: 1.75; }
+    .field-copy strong { color: white; }
+    .route-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2rem; }
+    .route-heading p { max-width: 360px; margin: 0; color: var(--muted); line-height: 1.6; }
+    .month { padding: 2rem 0 clamp(3rem, 6vw, 5rem); }
+    .month-heading { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; }
+    .month-number { display: grid; flex: 0 0 48px; width: 48px; height: 48px; place-items: center; border-radius: 50%; color: white; background: var(--teal); font-family: var(--serif); font-size: 1.35rem; }
+    .month-heading h3 { margin: 0; font-family: var(--serif); font-size: clamp(1.65rem, 3vw, 2.4rem); font-weight: 500; letter-spacing: -.025em; }
+    .month-heading p { margin: .25rem 0 0; color: var(--muted); font-size: .9rem; }
+    .module-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .module { position: relative; min-width: 0; padding: 1.5rem; border: 1px solid var(--line); border-radius: 1.15rem; background: var(--card); box-shadow: 0 9px 24px rgba(26,55,47,.045); }
+    .module:focus-within { outline: 3px solid rgba(20,108,104,.23); }
+    .module-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .7rem; }
+    .week { color: var(--muted); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 760; }
+    .badge { display: inline-flex; align-items: center; gap: .4rem; padding: .35rem .6rem; border-radius: 99px; color: #13534f; background: var(--teal-bright); font-size: .76rem; font-weight: 730; }
+    .badge.design { color: #714127; background: #f7e8db; }
+    .module h4 { margin: 1rem 0 .45rem; font-family: var(--serif); font-size: 1.7rem; font-weight: 500; line-height: 1.16; letter-spacing: -.025em; }
+    .module-goal { margin: 0 0 1.1rem; color: var(--ink-soft); font-size: .96rem; line-height: 1.58; }
+    .module-content { padding-top: .9rem; border-top: 1px solid #e7ebe4; }
+    .module-content h5 { margin: 0 0 .32rem; color: var(--teal); font-size: .73rem; letter-spacing: .1em; text-transform: uppercase; }
+    .module-content p { margin: 0; color: #4b5d5e; font-size: .94rem; line-height: 1.58; }
+    .evidence { display: flex; align-items: start; gap: .6rem; margin-top: 1rem; padding: .8rem .85rem; border-radius: .75rem; color: var(--ink); background: #f1f4ee; font-size: .88rem; line-height: 1.48; }
+    .evidence span { flex: 0 0 auto; color: var(--coral); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 800; }
+    .module-photo { width: 100%; height: 185px; margin: 1rem 0 .2rem; overflow: hidden; border-radius: .8rem; background: #dde6dd; }
+    .module-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+    .module-photo:hover img { transform: scale(1.035); }
+    .module-photo figcaption { position: absolute; }
+    .bridge { display: flex; align-items: center; gap: .7rem; padding: 1rem 0; color: var(--teal); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 800; }
+    .bridge::before, .bridge::after { content: ""; height: 1px; flex: 1; background: var(--line); }
+    .project { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 2rem; margin: 0 auto clamp(4rem, 8vw, 7rem); padding: clamp(1.5rem, 4vw, 3rem); border-radius: 1.25rem; color: #f4f5e9; background: var(--teal); }
+    .project .section-kicker { color: var(--lime); }
+    .project h2 { max-width: 700px; font-size: clamp(2rem, 4vw, 3.2rem); }
+    .project p { max-width: 740px; margin-bottom: 0; color: #d8e9e3; font-size: 1rem; line-height: 1.7; }
+    .project-mark { display: grid; place-items: center; width: 116px; height: 116px; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; color: var(--lime); font-family: var(--serif); font-size: 2.6rem; }
+    footer { padding: 1.8rem 1.25rem 2.5rem; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: .86rem; line-height: 1.7; }
+    footer a { color: var(--teal); font-weight: 700; }
+    footer strong { color: var(--ink); }
+    :focus-visible { outline: 3px solid #ee9c60; outline-offset: 3px; }
+    @media (max-width: 760px) {
+      .topbar { min-height: 68px; padding-inline: 1rem; }
+      .topnav a:not(.nav-cta) { display: none; }
+      .topnav .nav-cta { padding: .62rem .85rem; font-size: .84rem; }
+      .hero { min-height: 620px; background-position: 43% center; }
+      .hero::before { background: linear-gradient(90deg, rgba(9,31,34,.82), rgba(9,31,34,.48)), linear-gradient(0deg, rgba(9,31,34,.78), transparent 75%); }
+      .hero-inner { grid-template-columns: 1fr; align-items: end; gap: 1.3rem; padding-bottom: 2rem; }
+      h1 { font-size: clamp(3.4rem, 16vw, 5.2rem); }
+      .hero-note { width: auto; display: flex; align-items: center; gap: .9rem; padding: .75rem 1rem; }
+      .hero-note strong { font-size: 1.9rem; }
+      .hero-note span { margin-top: 0; }
+      .hero-caption { top: 1rem; right: 1rem; font-size: .64rem; }
+      .competencies { grid-template-columns: 1fr; }
+      .competency { padding: 1.15rem; }
+      .field-note { grid-template-columns: 1fr; }
+      .field-note img { height: 230px; min-height: 0; }
+      .field-copy { padding: 1.5rem; }
+      .route-heading { display: block; }
+      .route-heading p { margin-top: 1rem; }
+      .module-grid { grid-template-columns: 1fr; }
+      .module { padding: 1.2rem; }
+      .project { grid-template-columns: 1fr; }
+      .project-mark { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Inicio del sílabo de Biología para Reina">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M19.5 4.5C12 4.8 6 8.1 6 13.7c0 3.4 2.4 5.8 5.4 5.8 5.7 0 8.1-7.1 8.1-15Z" stroke="currentColor" stroke-width="1.7"/><path d="M4.5 20c3.2-4.4 6.7-7.9 11-10.7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+      <span>Biología <small>Bitácora de Reina</small></span>
+    </a>
+    <nav class="topnav" aria-label="Navegación principal">
+      <a href="#competencias">Competencias</a>
+      <a href="#ruta">Los 12 módulos</a>
+      <a class="nav-cta" href="#ruta">Ver mi ruta <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+      <span class="hero-caption">Lago Titicaca · Puno</span>
+      <div class="hero-inner">
+        <div>
+          <p class="eyebrow">Rosaspata · 4.º A · Biología</p>
+          <h1 id="titulo-principal">La vida<br>se estudia <em>de cerca.</em></h1>
+          <p class="hero-copy">Reina, esta ruta de aprendizaje te invita a observar, preguntar y descubrir cómo se relacionan los seres vivos con el lugar que compartimos.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#ruta">Explorar los módulos <span aria-hidden="true">↓</span></a></div>
+        </div>
+        <aside class="hero-note" aria-label="Duración del sílabo"><strong>12</strong><span>semanas para explorar<br>la biología de nuestro entorno</span></aside>
+      </div>
+    </section>
+
+    <section class="intro wrap" id="competencias" aria-labelledby="competencias-titulo">
+      <p class="section-kicker">Tu propósito de aprendizaje</p>
+      <h2 id="competencias-titulo">Pensar como científica.<br>Comprender como bióloga.</h2>
+      <p class="section-lede">En tres meses desarrollarás tres competencias de Ciencia y Tecnología: investigar con evidencias, explicar los fenómenos de la vida y proponer soluciones para cuidar el entorno.</p>
+      <div class="competencies">
+        <article class="competency"><span class="competency-num">01 / Indaga</span><h3>Investigar con evidencias</h3><p>Plantear preguntas, observar, organizar información y comunicar conclusiones basadas en evidencias.</p></article>
+        <article class="competency"><span class="competency-num">02 / Explica</span><h3>Conectar ideas científicas</h3><p>Explicar procesos de los seres vivos y relacionarlos con la biodiversidad, la Tierra y el ambiente.</p></article>
+        <article class="competency"><span class="competency-num">03 / Diseña</span><h3>Actuar ante un problema</h3><p>Proponer y evaluar una solución tecnológica sencilla frente a una necesidad del entorno.</p></article>
+      </div>
+    </section>
+
+    <aside class="field-note wrap" aria-label="La célula, unidad de la vida">
+      <img src="assets/celulas-vegetales.png" alt="Fotografía microscópica de células vegetales con paredes celulares y cloroplastos visibles" loading="lazy" width="1536" height="1024">
+      <div class="field-copy"><p class="section-kicker">Del microscopio al paisaje</p><h2>Todo empieza con algo pequeño.</h2><p>Una célula vegetal puede parecer una diminuta habitación llena de trabajo. Sus partes colaboran para mantener la vida, igual que los organismos se relacionan en un ecosistema.</p></div>
+    </aside>
+
+    <section class="wrap" id="ruta" aria-labelledby="ruta-titulo">
+      <div class="route-heading">
+        <div><p class="section-kicker">Una semana, un nuevo descubrimiento</p><h2 id="ruta-titulo">Tu ruta de 12 semanas</h2></div>
+        <p><strong>3 meses · 12 módulos · 1 módulo por semana.</strong><br>Cada semana cierra con una evidencia para mostrar lo que comprendiste.</p>
+      </div>
+
+      <section class="month" aria-labelledby="mes-1">
+        <div class="month-heading"><span class="month-number">01</span><div><h3 id="mes-1">Mes uno · Fundamentos de la vida</h3><p>Observar, reconocer y comprender los niveles de organización.</p></div></div>
+        <div class="module-grid">
+          <article class="module"><div class="module-top"><span class="week">Semana 01</span><span class="badge">Indaga</span></div><h4>Mirar como bióloga</h4><p class="module-goal">Transformar una observación cotidiana en una pregunta que se pueda investigar.</p><div class="module-content"><h5>Contenidos</h5><p>Observación, preguntas investigables, hipótesis, variables, registro y uso de evidencias.</p></div><div class="evidence"><span>Reto</span>Inicia una bitácora de campo con una observación de un ser vivo cercano.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 02</span><span class="badge">Explica</span></div><h4>La célula: unidad de la vida</h4><p class="module-goal">Comparar células vegetales y animales y relacionar sus estructuras con sus funciones.</p><figure class="module-photo"><img src="assets/celulas-vegetales.png" alt="Células de una hoja observadas al microscopio" loading="lazy" width="1536" height="1024"></figure><div class="module-content"><h5>Contenidos</h5><p>Membrana, citoplasma, núcleo, organelos; semejanzas y diferencias entre células.</p></div><div class="evidence"><span>Reto</span>Elabora un esquema comparativo con partes y funciones celulares.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 03</span><span class="badge">Explica + Indaga</span></div><h4>Energía para vivir</h4><p class="module-goal">Explicar cómo las plantas transforman energía y cómo las células la aprovechan.</p><div class="module-content"><h5>Contenidos</h5><p>Fotosíntesis: luz, agua y dióxido de carbono permiten formar glucosa y liberar oxígeno; respiración celular y transferencia de energía.</p></div><div class="evidence"><span>Reto</span>Representa con flechas qué entra y qué sale en la fotosíntesis.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 04</span><span class="badge">Explica</span></div><h4>De la célula al organismo</h4><p class="module-goal">Describir cómo se organizan las partes de un ser vivo y cooperan para cumplir funciones.</p><div class="module-content"><h5>Contenidos</h5><p>Células, tejidos, órganos y sistemas; organización en plantas y animales; relación entre estructura y función.</p></div><div class="evidence"><span>Reto</span>Construye un mapa de organización biológica usando un organismo de tu elección.</div></article>
+        </div>
+      </section>
+
+      <div class="bridge" aria-hidden="true">Segundo mes · procesos que sostienen la vida</div>
+
+      <section class="month" aria-labelledby="mes-2">
+        <div class="month-heading"><span class="month-number">02</span><div><h3 id="mes-2">Mes dos · Procesos y continuidad</h3><p>Explorar nutrición, reproducción, herencia y cambio biológico.</p></div></div>
+        <div class="module-grid">
+          <article class="module"><div class="module-top"><span class="week">Semana 05</span><span class="badge">Explica</span></div><h4>Nutrición y transporte</h4><p class="module-goal">Relacionar el intercambio de materia con las necesidades de plantas y animales.</p><div class="module-content"><h5>Contenidos</h5><p>Nutrientes y digestión; absorción de agua y minerales; transporte de sustancias en plantas y cuerpo humano.</p></div><div class="evidence"><span>Reto</span>Dibuja el recorrido de un nutriente en una planta o en el cuerpo.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 06</span><span class="badge">Explica + Indaga</span></div><h4>Reproducción y ciclos de vida</h4><p class="module-goal">Explicar cómo la reproducción permite la continuidad de las poblaciones.</p><div class="module-content"><h5>Contenidos</h5><p>Reproducción sexual y asexual; polinización, semillas, dispersión y ciclos de vida de plantas y animales.</p></div><div class="evidence"><span>Reto</span>Representa el ciclo de una planta cultivada en los Andes.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 07</span><span class="badge">Explica</span></div><h4>Herencia y diversidad</h4><p class="module-goal">Relacionar el ADN con la transmisión de características y la diversidad entre organismos.</p><div class="module-content"><h5>Contenidos</h5><p>ADN, genes y cromosomas; información hereditaria; semejanzas y variación entre individuos.</p></div><div class="evidence"><span>Reto</span>Modela cómo se combinan características usando fichas de colores.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 08</span><span class="badge">Explica + Indaga</span></div><h4>Evolución y adaptación</h4><p class="module-goal">Explicar cómo la variación heredable y la selección natural producen cambios en poblaciones a lo largo de generaciones.</p><div class="module-content"><h5>Contenidos</h5><p>Variación, selección natural, adaptación y evidencias de evolución; ejemplos de ambientes de altura.</p></div><div class="evidence"><span>Reto</span>Compara dos organismos y explica cómo sus rasgos se relacionan con su ambiente.</div></article>
+        </div>
+      </section>
+
+      <div class="bridge" aria-hidden="true">Tercer mes · biodiversidad, ambiente y acción</div>
+
+      <section class="month" aria-labelledby="mes-3">
+        <div class="month-heading"><span class="month-number">03</span><div><h3 id="mes-3">Mes tres · Ecosistemas y cuidado</h3><p>Conectar los aprendizajes con la diversidad de vida de Puno.</p></div></div>
+        <div class="module-grid">
+          <article class="module"><div class="module-top"><span class="week">Semana 09</span><span class="badge">Explica + Indaga</span></div><h4>Ecosistemas de Puno</h4><p class="module-goal">Reconocer cómo interactúan los organismos y los factores físicos en un ecosistema.</p><div class="module-content"><h5>Contenidos</h5><p>Factores bióticos y abióticos, hábitat, poblaciones y comunidades; lago Titicaca, totorales y puna.</p></div><div class="evidence"><span>Reto</span>Elabora un mapa de elementos vivos y no vivos de un ambiente cercano.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 10</span><span class="badge">Explica</span></div><h4>Redes de vida</h4><p class="module-goal">Interpretar cómo circulan la energía y la materia en las relaciones alimentarias.</p><div class="module-content"><h5>Contenidos</h5><p>Productores, consumidores y descomponedores; cadenas y redes alimentarias; flujo de energía y ciclos de materia.</p></div><div class="evidence"><span>Reto</span>Construye una red alimentaria sencilla de un ecosistema altoandino.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 11</span><span class="badge design">Explica + Diseña</span></div><h4>Biodiversidad y conservación</h4><p class="module-goal">Analizar por qué la biodiversidad es valiosa y cómo las acciones humanas pueden afectarla.</p><figure class="module-photo"><img src="assets/rana-titicaca.png" alt="Rana acuática del Titicaca en su hábitat entre plantas acuáticas" loading="lazy" width="1536" height="1024"></figure><div class="module-content"><h5>Contenidos</h5><p>Biodiversidad y hábitat; presiones como la contaminación y la pérdida de hábitat; cuidado de especies y ambientes del Titicaca.</p></div><div class="evidence"><span>Reto</span>Diseña un mensaje informativo para proteger la vida del lago y sus orillas.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 12</span><span class="badge design">Integra las 3</span></div><h4>Proyecto: una pregunta, una propuesta</h4><p class="module-goal">Integrar lo aprendido para investigar un tema local y comunicar una propuesta responsable.</p><div class="module-content"><h5>Contenidos</h5><p>Pregunta investigable, fuentes confiables, registro de evidencias, conclusiones y diseño de una solución posible.</p></div><div class="evidence"><span>Producto final</span>Presenta tu miniinvestigación con una conclusión y una acción concreta.</div></article>
+        </div>
+      </section>
+    </section>
+
+    <section class="project wrap" aria-labelledby="proyecto-titulo">
+      <div><p class="section-kicker">Tu cierre de ruta</p><h2 id="proyecto-titulo">La ciencia empieza con una buena pregunta.</h2><p>Elige un aspecto de la vida en tu comunidad, reúne evidencias de forma segura y comparte una idea que ayude a comprenderlo o cuidarlo. Tu mirada también puede aportar a la ciencia.</p></div>
+      <div class="project-mark" aria-hidden="true">12<span style="font-size:1rem"> semanas</span></div>
+    </section>
+
+    <aside class="field-note wrap" aria-label="Biodiversidad del lago Titicaca">
+      <img src="assets/rana-titicaca.png" alt="Rana acuática del Titicaca en el agua, entre totora y vegetación sumergida" loading="lazy" width="1536" height="1024">
+      <div class="field-copy"><p class="section-kicker">Una vida que cuidar</p><h2>El Titicaca también es aula.</h2><p>Observar la vida del lago nos permite conectar conceptos como adaptación, biodiversidad e interacción ecológica con un ambiente real. <strong>Mirar con atención es el primer paso para cuidar.</strong></p></div>
+    </aside>
+  </main>
+
+  <footer>
+    <p><strong>Reina · Biología · Rosaspata 4A · Puno</strong><br>Ruta de aprendizaje: 12 módulos, uno por semana.</p>
+    <p>Competencias de Ciencia y Tecnología basadas en el <a href="https://www.minedu.gob.pe/curriculo/pdf/programa-curricular-educacion-secundaria.pdf" target="_blank" rel="noopener noreferrer">Programa Curricular de Educación Secundaria del MINEDU</a>.</p>
+    <p>Las imágenes hiperrealistas son ilustrativas y fueron generadas con IA; no representan registros científicos de campo.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111a2b">
+  <meta name="description" content="Sílabo de emprendimiento responsable para Yesenia Condori Choque, 4A Rosaspata: 12 semanas para diseñar, probar y presentar una idea de negocio de baja inversión.">
+  <title>Yesenia · Emprendimiento 4A Rosaspata</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23111a2b'/%3E%3Cpath d='M17 16h9v24c0 7-4 10-11 10-3 0-6-1-8-2l3-7c1 1 3 2 5 2s3-1 3-4V16Zm16 0h9v34h-9zm14 0h9v34h-9z' fill='%23e5b869'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: light;
+      --night: #111a2b;
+      --night-soft: #202e43;
+      --ink: #1c2939;
+      --body: #475366;
+      --muted: #707b8a;
+      --paper: #f4f2ed;
+      --card: #fffefa;
+      --line: #e1ddd4;
+      --gold: #e5b869;
+      --gold-pale: #f6e9ce;
+      --copper: #b96d4c;
+      --sage: #dfe8df;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--paper);
+      scroll-behavior: smooth;
+    }
+    * { box-sizing: border-box; }
+    body { min-width: 320px; margin: 0; background: var(--paper); }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    .skip { position: absolute; left: 1rem; top: -4rem; z-index: 10; padding: .8rem 1rem; background: white; border-radius: .6rem; }
+    .skip:focus { top: 1rem; }
+    .topbar { position: relative; z-index: 4; min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; padding: 0 clamp(1rem, 5vw, 5rem); color: #f7f5ef; background: var(--night); }
+    .brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; font-weight: 760; letter-spacing: -.025em; }
+    .brand-mark { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid rgba(229,184,105,.56); border-radius: 50%; color: var(--gold); font-family: var(--serif); font-size: 1.35rem; }
+    .brand small { display: block; margin-top: .12rem; color: #bfc8d1; font-size: .67rem; letter-spacing: .13em; text-transform: uppercase; font-weight: 600; }
+    .nav { display: flex; align-items: center; gap: clamp(.8rem, 2vw, 2rem); }
+    .nav a { color: #e2e5e8; font-size: .9rem; text-decoration: none; }
+    .nav a:hover, .nav a:focus-visible { color: var(--gold); }
+    .nav .nav-cta { padding: .72rem 1rem; color: var(--night); background: var(--gold); border-radius: 999px; font-weight: 760; }
+    .hero { position: relative; min-height: clamp(560px, 68vw, 730px); display: grid; align-items: end; overflow: hidden; color: white; background: var(--night) url("assets/hero-emprendimiento.png") center 46% / cover no-repeat; }
+    .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,20,35,.91) 0%, rgba(11,20,35,.76) 36%, rgba(11,20,35,.18) 78%), linear-gradient(0deg, rgba(11,20,35,.7), transparent 55%); }
+    .hero-caption { position: absolute; top: 1.35rem; right: clamp(1rem, 5vw, 5rem); color: rgba(255,255,255,.86); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; }
+    .hero-inner { position: relative; width: min(1220px, 100%); margin: 0 auto; padding: clamp(3.8rem, 8vw, 7rem) clamp(1.25rem, 5vw, 5rem); display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 2rem; }
+    .eyebrow { display: inline-flex; align-items: center; gap: .65rem; color: var(--gold); font-size: .76rem; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 27px; height: 1px; background: var(--gold); }
+    h1 { margin: .9rem 0 .65rem; font-size: clamp(4.8rem, 15vw, 11rem); line-height: .79; letter-spacing: -.09em; font-weight: 680; }
+    h1 span { display: block; margin: 1rem 0 0 .15rem; color: #f5d79f; font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2.45rem); line-height: 1.15; letter-spacing: -.02em; font-weight: 400; }
+    .hero-copy { max-width: 590px; margin: 1.2rem 0 0; color: #e5e8e8; font-size: clamp(1.02rem, 1.7vw, 1.22rem); line-height: 1.65; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 1.6rem; }
+    .button { display: inline-flex; min-height: 47px; align-items: center; justify-content: center; gap: .55rem; padding: .75rem 1.2rem; border-radius: 999px; text-decoration: none; font-weight: 780; transition: transform .18s ease, background .18s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: var(--night); background: var(--gold); }
+    .button-outline { color: white; border: 1px solid rgba(255,255,255,.55); background: rgba(17,26,43,.22); }
+    .hero-note { width: 190px; padding: 1.15rem 1.25rem; border: 1px solid rgba(255,255,255,.4); border-radius: 1rem; background: rgba(16,25,40,.46); backdrop-filter: blur(10px); }
+    .hero-note strong { display: block; color: var(--gold); font-family: var(--serif); font-size: 2.8rem; line-height: 1; font-weight: 500; }
+    .hero-note span { display: block; margin-top: .55rem; color: #e8e9e7; font-size: .85rem; line-height: 1.5; }
+    .wrap { width: min(1160px, calc(100% - 2.5rem)); margin-inline: auto; }
+    .intro { padding: clamp(3.5rem, 7vw, 6rem) 0 3rem; }
+    .kicker { margin: 0 0 .75rem; color: #98603e; font-size: .75rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 850; }
+    h2 { margin: 0; font-family: var(--serif); font-size: clamp(2.35rem, 5vw, 4rem); line-height: 1.06; letter-spacing: -.045em; font-weight: 500; }
+    .lede { max-width: 760px; color: var(--body); font-size: 1.05rem; line-height: 1.75; }
+    .competencies { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .8rem; margin-top: 2rem; }
+    .competency { min-height: 205px; padding: 1.25rem; border: 1px solid var(--line); border-radius: 1rem; background: rgba(255,254,250,.85); }
+    .competency-num { color: var(--copper); font-family: var(--serif); font-size: 1.1rem; }
+    .competency h3 { margin: .55rem 0 .45rem; font-size: 1.03rem; line-height: 1.35; }
+    .competency p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.58; }
+    .reality { display: grid; grid-template-columns: 1.03fr .97fr; overflow: hidden; margin: 1.2rem auto clamp(4rem, 8vw, 6rem); border-radius: 1.35rem; color: #f7f5ef; background: var(--night); }
+    .reality img { width: 100%; height: 100%; min-height: 310px; object-fit: cover; }
+    .reality-copy { align-self: center; padding: clamp(1.5rem, 4vw, 3.2rem); }
+    .reality-copy .kicker { color: var(--gold); }
+    .reality-copy h2 { max-width: 490px; font-size: clamp(2rem, 4vw, 3.15rem); }
+    .reality-copy p { max-width: 520px; color: #d7dce1; font-size: .98rem; line-height: 1.75; }
+    .reality-copy strong { color: white; }
+    .video-card { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr); gap: 1.5rem; align-items: center; margin: 0 auto clamp(4rem, 8vw, 6rem); padding: clamp(1rem, 3vw, 1.5rem); border: 1px solid var(--line); border-radius: 1.25rem; background: var(--card); box-shadow: 0 12px 30px rgba(28,41,57,.055); }
+    .video-frame { position: relative; overflow: hidden; width: 100%; aspect-ratio: 16 / 9; border-radius: .9rem; background: #101a29; }
+    .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .video-copy { padding: 1rem; }
+    .video-copy h3 { margin: .2rem 0 .6rem; font-family: var(--serif); font-size: 1.8rem; line-height: 1.12; font-weight: 500; }
+    .video-copy p { color: var(--body); line-height: 1.65; }
+    .video-copy a { color: #885638; font-weight: 750; }
+    .route-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2rem; }
+    .route-heading p { max-width: 370px; margin: 0; color: var(--muted); line-height: 1.65; }
+    .month { padding: 1.8rem 0 clamp(3rem, 6vw, 5rem); }
+    .month-heading { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.2rem; }
+    .month-number { flex: 0 0 48px; width: 48px; height: 48px; display: grid; place-items: center; border-radius: 50%; color: var(--night); background: var(--gold); font-family: var(--serif); font-size: 1.32rem; }
+    .month-heading h3 { margin: 0; font-family: var(--serif); font-size: clamp(1.65rem, 3vw, 2.35rem); font-weight: 500; letter-spacing: -.025em; }
+    .month-heading p { margin: .25rem 0 0; color: var(--muted); font-size: .9rem; }
+    .module-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .module { min-width: 0; padding: 1.45rem; border: 1px solid var(--line); border-radius: 1.1rem; background: var(--card); box-shadow: 0 9px 24px rgba(28,41,57,.045); }
+    .module-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .65rem; }
+    .week { color: var(--muted); font-size: .73rem; letter-spacing: .13em; text-transform: uppercase; font-weight: 800; }
+    .badge { display: inline-flex; align-items: center; gap: .35rem; padding: .35rem .6rem; border-radius: 99px; color: #355240; background: var(--sage); font-size: .73rem; font-weight: 750; }
+    .badge.gold { color: #774b24; background: var(--gold-pale); }
+    .module h4 { margin: .95rem 0 .45rem; font-family: var(--serif); font-size: 1.65rem; line-height: 1.15; letter-spacing: -.025em; font-weight: 500; }
+    .module-goal { margin: 0 0 1rem; color: var(--body); font-size: .94rem; line-height: 1.6; }
+    .module-content { padding-top: .85rem; border-top: 1px solid #ebe8e1; }
+    .module-content h5 { margin: 0 0 .33rem; color: #98603e; font-size: .72rem; letter-spacing: .11em; text-transform: uppercase; }
+    .module-content p { margin: 0; color: #4f5a68; font-size: .92rem; line-height: 1.58; }
+    .evidence { display: flex; align-items: start; gap: .6rem; margin-top: 1rem; padding: .78rem .85rem; border-radius: .72rem; color: var(--ink); background: #f3f0e9; font-size: .87rem; line-height: 1.48; }
+    .evidence span { flex: 0 0 auto; color: #a65e3f; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 850; }
+    .module-photo { height: 190px; overflow: hidden; margin: 1rem 0 .2rem; border-radius: .8rem; background: #e6e2d8; }
+    .module-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+    .module-photo:hover img { transform: scale(1.035); }
+    .bridge { display: flex; align-items: center; gap: .7rem; padding: .9rem 0; color: #976240; font-size: .76rem; letter-spacing: .13em; text-transform: uppercase; font-weight: 850; }
+    .bridge::before, .bridge::after { content: ""; height: 1px; flex: 1; background: var(--line); }
+    .final-project { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 2rem; margin: 0 auto clamp(4rem, 8vw, 6rem); padding: clamp(1.5rem, 4vw, 3rem); border-radius: 1.25rem; color: #f6f4ed; background: #293d38; }
+    .final-project .kicker { color: var(--gold); }
+    .final-project h2 { max-width: 720px; font-size: clamp(2rem, 4vw, 3.2rem); }
+    .final-project p { max-width: 760px; margin-bottom: 0; color: #dce6df; font-size: .98rem; line-height: 1.72; }
+    .project-mark { display: grid; place-items: center; width: 120px; height: 120px; border: 1px solid rgba(229,184,105,.65); border-radius: 50%; color: var(--gold); font-family: var(--serif); font-size: 2.5rem; }
+    .note { margin: 0 auto 4rem; padding: 1.1rem 1.2rem; border-left: 4px solid var(--copper); color: #4e5965; background: #ebe8e0; font-size: .88rem; line-height: 1.6; }
+    footer { padding: 1.8rem 1.25rem 2.5rem; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: .85rem; line-height: 1.75; }
+    footer a { color: #82573b; font-weight: 730; }
+    footer strong { color: var(--ink); }
+    :focus-visible { outline: 3px solid #d38d54; outline-offset: 3px; }
+    @media (max-width: 850px) { .competencies { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 700px) {
+      .topbar { min-height: 67px; padding-inline: 1rem; }
+      .nav a:not(.nav-cta) { display: none; }
+      .nav .nav-cta { padding: .6rem .8rem; font-size: .82rem; }
+      .hero { min-height: 680px; background-position: 58% center; }
+      .hero::before { background: linear-gradient(90deg, rgba(11,20,35,.82), rgba(11,20,35,.45)), linear-gradient(0deg, rgba(11,20,35,.86), transparent 82%); }
+      .hero-inner { grid-template-columns: 1fr; gap: 1.2rem; padding-bottom: 1.7rem; }
+      h1 { font-size: clamp(4.5rem, 21vw, 7.5rem); }
+      .hero-note { width: auto; display: flex; align-items: center; gap: .85rem; padding: .7rem .9rem; }
+      .hero-note strong { font-size: 1.9rem; }
+      .hero-note span { margin-top: 0; }
+      .hero-caption { top: 1rem; right: 1rem; font-size: .62rem; }
+      .competencies { grid-template-columns: 1fr; }
+      .competency { min-height: 0; }
+      .reality { grid-template-columns: 1fr; }
+      .reality img { height: 230px; min-height: 0; }
+      .reality-copy { padding: 1.5rem; }
+      .video-card { grid-template-columns: 1fr; }
+      .video-copy { padding: .4rem .3rem .7rem; }
+      .route-heading { display: block; }
+      .route-heading p { margin-top: 1rem; }
+      .module-grid { grid-template-columns: 1fr; }
+      .module { padding: 1.2rem; }
+      .final-project { grid-template-columns: 1fr; }
+      .project-mark { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Inicio del sílabo de Yesenia">
+      <span class="brand-mark" aria-hidden="true">Y</span>
+      <span>Emprende <small>Bitácora de Yesenia</small></span>
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#competencias">Competencias</a>
+      <a href="#ruta">Los 12 módulos</a>
+      <a class="nav-cta" href="#ruta">Ver mi ruta <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+      <span class="hero-caption">Rosaspata · Puno · 4A</span>
+      <div class="hero-inner">
+        <div>
+          <p class="eyebrow">Educación para el Trabajo · 4.º A</p>
+          <h1 id="titulo-principal">YESENIA<span>Condori Choque</span></h1>
+          <p class="hero-copy">Una ruta de tres meses para convertir una idea en una propuesta útil: observar lo que necesita la comunidad, diseñar con creatividad y comprobar si el proyecto puede funcionar.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#ruta">Explorar los módulos <span aria-hidden="true">↓</span></a><a class="button button-outline" href="#video">Ver el video inicial <span aria-hidden="true">▶</span></a></div>
+        </div>
+        <aside class="hero-note" aria-label="Duración del sílabo"><strong>12</strong><span>semanas para imaginar,<br>probar y mejorar una idea</span></aside>
+      </div>
+    </section>
+
+    <section class="intro wrap" id="competencias" aria-labelledby="competencias-titulo">
+      <p class="kicker">Tu propósito de aprendizaje</p>
+      <h2 id="competencias-titulo">Ideas con propósito.<br>Proyectos con los pies en la tierra.</h2>
+      <p class="lede">Durante este recorrido desarrollarás la competencia <strong>“Gestiona proyectos de emprendimiento económico o social”</strong>. Aprenderás a reconocer necesidades cercanas, crear una propuesta de valor, organizarte con otras personas y evaluar los resultados con evidencias. El contexto de Rosaspata y Puno será un punto de partida para imaginar soluciones pertinentes.</p>
+      <div class="competencies">
+        <article class="competency"><span class="competency-num">01 / Crea valor</span><h3>Comprende a las personas</h3><p>Observa necesidades y diseña una propuesta que ofrezca un beneficio claro a quienes la usarían.</p></article>
+        <article class="competency"><span class="competency-num">02 / Coopera</span><h3>Organiza el trabajo</h3><p>Acuerda metas, distribuye tareas, escucha ideas y aporta para lograr un resultado compartido.</p></article>
+        <article class="competency"><span class="competency-num">03 / Aplica</span><h3>Usa habilidades técnicas</h3><p>Planifica procesos, recursos y herramientas sencillas para crear o brindar un producto o servicio.</p></article>
+        <article class="competency"><span class="competency-num">04 / Evalúa</span><h3>Aprende de los resultados</h3><p>Compara lo planeado con lo obtenido, calcula costos básicos y mejora según la opinión de usuarios.</p></article>
+      </div>
+    </section>
+
+    <aside class="reality wrap" aria-label="Emprendimiento local y planificación">
+      <img src="assets/taller-textil.png" alt="Trabajo textil artesanal junto a un cuaderno de planificación, con el paisaje del altiplano al fondo" loading="lazy" width="1536" height="1024">
+      <div class="reality-copy"><p class="kicker">Una idea realista empieza por mirar alrededor</p><h2>Lo que sabes hacer también puede crear valor.</h2><p>Un oficio, una habilidad digital, una receta o un servicio pueden inspirar una propuesta. <strong>“Sin capital inicial” no significa “sin ningún costo”:</strong> hay que considerar tiempo, materiales, conexión, transporte y esfuerzo. En el curso trabajaremos con ejemplos y simulaciones; no necesitas invertir dinero ni vender productos para completar los retos.</p></div>
+    </aside>
+
+    <section class="video-card wrap" id="video" aria-labelledby="video-titulo">
+      <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/SD4Oeyha1LM?rel=0" title="Video: 5 negocios que no requieren capital inicial" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+      <div class="video-copy"><p class="kicker">Punto de partida · Semana 1</p><h3 id="video-titulo">“5 negocios que no requieren capital inicial”</h3><p>Mira el video con curiosidad y también con mirada crítica: ¿qué recursos, tiempo, herramientas o gastos sí podría necesitar cada idea? Esa pregunta guiará el primer módulo.</p><a href="https://www.youtube.com/watch?v=SD4Oeyha1LM" target="_blank" rel="noopener noreferrer">Abrir el video en YouTube ↗</a></div>
+    </section>
+
+    <section class="wrap" id="ruta" aria-labelledby="ruta-titulo">
+      <div class="route-heading"><div><p class="kicker">Una semana, un avance concreto</p><h2 id="ruta-titulo">Tu ruta de 12 semanas</h2></div><p><strong>3 meses · 12 módulos · 1 módulo por semana.</strong><br>Cada semana termina con una evidencia sencilla que te ayuda a construir tu proyecto paso a paso.</p></div>
+
+      <section class="month" aria-labelledby="mes-1">
+        <div class="month-heading"><span class="month-number">01</span><div><h3 id="mes-1">Mes uno · Observar y descubrir oportunidades</h3><p>Comprender necesidades reales y explorar posibles respuestas.</p></div></div>
+        <div class="module-grid">
+          <article class="module"><div class="module-top"><span class="week">Semana 01</span><span class="badge gold">Crea propuestas de valor</span></div><h4>¿De verdad existe un negocio sin inversión?</h4><p class="module-goal">Analizar el video inicial e identificar qué se necesita para poner en marcha cada idea, además del dinero.</p><div class="module-content"><h5>Contenidos</h5><p>Idea, oportunidad y modelo de negocio; diferencia entre capital, costos, recursos disponibles y trabajo propio; lectura crítica de mensajes publicitarios.</p></div><div class="evidence"><span>Reto</span>Completa una ficha comparativa de las cinco ideas del video: beneficio, recursos, costos posibles y preguntas por investigar.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 02</span><span class="badge">Aplica habilidades</span></div><h4>Mi mapa de recursos y talentos</h4><p class="module-goal">Reconocer habilidades propias, recursos accesibles y apoyos posibles sin comprometer dinero.</p><figure class="module-photo"><img src="assets/taller-textil.png" alt="Manos trabajando una pieza textil y registrando ideas en un cuaderno" loading="lazy" width="1536" height="1024"></figure><div class="module-content"><h5>Contenidos</h5><p>Habilidades, recursos humanos y materiales, herramientas compartidas, saberes locales y redes de apoyo; cuidado de recursos y uso responsable.</p></div><div class="evidence"><span>Reto</span>Diseña un mapa personal de tres cosas que sabes hacer y los recursos disponibles para practicarlas.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 03</span><span class="badge gold">Crea propuestas de valor</span></div><h4>Detectar una necesidad cercana</h4><p class="module-goal">Observar el entorno y formular una necesidad concreta de un grupo de personas.</p><div class="module-content"><h5>Contenidos</h5><p>Usuario, necesidad, observación y preguntas abiertas; registro respetuoso de opiniones; problemas cotidianos de la escuela o comunidad.</p></div><div class="evidence"><span>Reto</span>Presenta una observación y una breve entrevista voluntaria, sin pedir datos personales sensibles.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 04</span><span class="badge gold">Crea propuestas de valor</span></div><h4>¿Qué solución aportaría valor?</h4><p class="module-goal">Conectar una necesidad con una propuesta útil, clara y distinta de las alternativas existentes.</p><div class="module-content"><h5>Contenidos</h5><p>Propuesta de valor, beneficios, alternativas y diferenciación; criterios de utilidad, accesibilidad, pertinencia cultural y cuidado ambiental.</p></div><div class="evidence"><span>Reto</span>Escribe tres versiones de una propuesta y pide a dos personas que indiquen cuál entienden mejor y por qué.</div></article>
+        </div>
+      </section>
+
+      <div class="bridge" aria-hidden="true">Segundo mes · diseñar, organizar y calcular</div>
+
+      <section class="month" aria-labelledby="mes-2">
+        <div class="month-heading"><span class="month-number">02</span><div><h3 id="mes-2">Mes dos · Diseñar un modelo posible</h3><p>Dar forma a la propuesta y entender sus números básicos.</p></div></div>
+        <div class="module-grid">
+          <article class="module"><div class="module-top"><span class="week">Semana 05</span><span class="badge gold">Crea propuestas de valor</span></div><h4>Elegir cómo entregar el beneficio</h4><p class="module-goal">Comparar maneras de ofrecer una solución sin asumir que alguna funciona automáticamente ni que carece de costos.</p><div class="module-content"><h5>Contenidos</h5><p>Productos y servicios; encargos, preventa responsable, intermediación, servicios por habilidad y difusión digital; riesgos, compromisos y permisos.</p></div><div class="evidence"><span>Reto</span>Compara dos modelos para tu idea y señala cuál sería más sencillo de probar en una simulación escolar.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 06</span><span class="badge">Aplica habilidades</span></div><h4>Del proceso al prototipo</h4><p class="module-goal">Representar cómo se prepara un producto o se brinda un servicio con pasos claros y seguros.</p><figure class="module-photo"><img src="assets/equipo-prototipo.png" alt="Estudiantes organizan una idea de producto artesanal y un prototipo en equipo" loading="lazy" width="1536" height="1024"></figure><div class="module-content"><h5>Contenidos</h5><p>Secuencia de actividades, materiales, herramientas, calidad, seguridad e higiene según el tipo de propuesta; prototipo de papel o demostración simulada.</p></div><div class="evidence"><span>Reto</span>Presenta un prototipo dibujado o de bajo costo y un diagrama de sus pasos, sin comprar materiales.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 07</span><span class="badge">Evalúa resultados</span></div><h4>Costos, precio y ganancia</h4><p class="module-goal">Estimar si los ingresos previstos podrían cubrir los recursos usados en una propuesta.</p><div class="module-content"><h5>Contenidos</h5><p>Costos fijos y variables, costo por unidad, precio, ingreso, ganancia y punto de equilibrio con ejemplos ficticios en soles.</p></div><div class="evidence"><span>Reto</span>Completa un presupuesto de práctica e identifica qué costo suele pasar desapercibido.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 08</span><span class="badge gold">Crea propuestas de valor</span></div><h4>Comunicar sin exagerar</h4><p class="module-goal">Crear un mensaje que explique la propuesta con claridad, honestidad y respeto a las personas usuarias.</p><div class="module-content"><h5>Contenidos</h5><p>Audiencia, canales de comunicación, atención al cliente, imagen y promoción; publicidad honesta, protección de datos y verificación de afirmaciones.</p></div><div class="evidence"><span>Reto</span>Elabora un afiche o guion de 30 segundos que comunique el beneficio sin prometer resultados garantizados.</div></article>
+        </div>
+      </section>
+
+      <div class="bridge" aria-hidden="true">Tercer mes · probar, mejorar y presentar</div>
+
+      <section class="month" aria-labelledby="mes-3">
+        <div class="month-heading"><span class="month-number">03</span><div><h3 id="mes-3">Mes tres · Poner a prueba y aprender</h3><p>Validar la idea con cuidado, evaluar evidencias y compartir una propuesta final.</p></div></div>
+        <div class="module-grid">
+          <article class="module"><div class="module-top"><span class="week">Semana 09</span><span class="badge">Trabaja cooperativamente</span></div><h4>Plan de trabajo y responsabilidades</h4><p class="module-goal">Organizar tareas, plazos y responsabilidades para que la idea se pueda explicar y poner a prueba.</p><div class="module-content"><h5>Contenidos</h5><p>Meta, actividades, cronograma, roles, colaboración, acuerdos, materiales y gestión básica de riesgos.</p></div><div class="evidence"><span>Reto</span>Arma un cronograma de una semana y un cuadro sencillo de responsabilidades.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 10</span><span class="badge gold">Crea propuestas de valor</span></div><h4>Probar la idea con usuarios</h4><p class="module-goal">Obtener comentarios honestos sobre un prototipo antes de pensar en ofrecerlo de verdad.</p><figure class="module-photo"><img src="assets/equipo-prototipo.png" alt="Equipo de estudiantes muestra un prototipo y escucha comentarios" loading="lazy" width="1536" height="1024"></figure><div class="module-content"><h5>Contenidos</h5><p>Prueba pequeña y segura, preguntas neutrales, observación, criterios de aceptación y análisis de sugerencias.</p></div><div class="evidence"><span>Reto</span>Registra tres comentarios anónimos y anota qué cambiarías a partir de ellos.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 11</span><span class="badge gold">Evalúa resultados</span></div><h4>Revisar, mejorar y cuidar</h4><p class="module-goal">Evaluar la viabilidad de la idea considerando beneficios, costos, seguridad y efectos en el entorno.</p><div class="module-content"><h5>Contenidos</h5><p>Resultados esperados frente a evidencias, mejora continua, riesgos, sostenibilidad, trato justo, consumo responsable y consecuencias sociales o ambientales.</p></div><div class="evidence"><span>Reto</span>Completa una tabla “funciona / falta comprobar / debo mejorar” con una decisión justificada.</div></article>
+          <article class="module"><div class="module-top"><span class="week">Semana 12</span><span class="badge gold">Integra las capacidades</span></div><h4>Presentar un proyecto responsable</h4><p class="module-goal">Comunicar una propuesta de emprendimiento de baja inversión basada en una necesidad real y en cálculos transparentes.</p><div class="module-content"><h5>Contenidos</h5><p>Problema, personas usuarias, propuesta de valor, proceso, recursos, costos estimados, prueba realizada, aprendizajes y siguiente mejora.</p></div><div class="evidence"><span>Producto final</span>Presenta un mini plan visual o exposición breve con evidencias y una reflexión sobre lo que aún falta validar.</div></article>
+        </div>
+      </section>
+    </section>
+
+    <section class="final-project wrap" aria-labelledby="proyecto-titulo">
+      <div><p class="kicker">Tu cierre de ruta</p><h2 id="proyecto-titulo">Una idea bien pensada vale más que una promesa fácil.</h2><p>Al final tendrás una propuesta que explica a quién ayuda, cómo funcionaría, qué recursos podría necesitar y qué aprendiste al ponerla a prueba. No buscamos prometer ganancias: buscamos investigar, decidir con responsabilidad y mejorar.</p></div>
+      <div class="project-mark" aria-hidden="true">12<span style="font-size:.9rem"> semanas</span></div>
+    </section>
+
+    <aside class="note wrap"><strong>Importante:</strong> las actividades son educativas y pueden hacerse con ejemplos ficticios, dibujos y materiales disponibles. No se pide a Yesenia comprar materiales, abrir cuentas, publicar información personal, pedir préstamos ni realizar ventas reales.</aside>
+  </main>
+
+  <footer>
+    <p><strong>YESENIA CONDORI CHOQUE · 4A · ROSASPATA · PUNO</strong><br>Sílabo personal de Educación para el Trabajo · 12 módulos semanales · duración sugerida: tres meses.</p>
+    <p>Competencia y capacidades alineadas al <a href="https://www.minedu.gob.pe/curriculo/pdf/programa-curricular-educacion-secundaria.pdf" target="_blank" rel="noopener noreferrer">Programa Curricular de Educación Secundaria del Ministerio de Educación del Perú</a>. Consulta complementaria: <a href="https://repositorio.minedu.gob.pe/handle/20.500.12799/11830" target="_blank" rel="noopener noreferrer">Texto de Educación para el Trabajo 4.º grado</a>.</p>
+    <p>Las fotografías de apoyo son ilustrativas, fueron generadas con IA y no muestran a Yesenia ni documentan negocios reales. El video enlazado es material de un tercero y requiere conexión a internet.</p>
+  </footer>
+</body>
+</html>
