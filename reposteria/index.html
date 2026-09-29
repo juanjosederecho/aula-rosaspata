@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Repostería artesanal — Julma Gil Chambi y María Manueliz Peralta Machaca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #f7f1e8;
+      --paper: #fffdf8;
+      --ink: #2c241c;
+      --muted: #6d5c4e;
+      --accent: #8a4b32;
+      --accent-dark: #6b3824;
+      --line: #e6d5c3;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Source Sans 3", sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    header {
+      background:
+        linear-gradient(180deg, rgba(44,36,28,.55), rgba(44,36,28,.35)),
+        url("img/m1.jpg") center 45% / cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 72px 24px 64px;
+    }
+    header .kicker {
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 600;
+      opacity: .9;
+    }
+    header h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(40px, 7vw, 68px);
+      font-weight: 600;
+      margin: 10px 0 8px;
+    }
+    header .student {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(22px, 3.2vw, 30px);
+      font-style: italic;
+      font-weight: 500;
+    }
+    header .meta {
+      margin-top: 14px;
+      font-size: 14px;
+      opacity: .9;
+    }
+    main { max-width: 1120px; margin: 0 auto; padding: 36px 20px 64px; }
+    .intro {
+      max-width: 720px;
+      margin: 0 auto 36px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 17px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    article {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(44,36,28,.06);
+    }
+    article img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+    }
+    article .body { padding: 18px 20px 22px; }
+    .num {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+    article h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      color: var(--accent-dark);
+    }
+    article p { color: var(--muted); font-size: 15.5px; }
+    footer {
+      text-align: center;
+      padding: 10px 20px 40px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="kicker">Sílabo · 8 módulos</p>
+    <h1>Repostería artesanal</h1>
+    <p class="student">Julma Gil Chambi</p>
+    <p class="student">María Manueliz Peralta Machaca</p>
+    <p class="meta">I.E. Rosaspata · 4.° B · 2026</p>
+  </header>
+  <main>
+    <p class="intro">Ocho sesiones para conocer la repostería del Perú y de Puno, preparar una receta artesanal y presentarla con precio, envase y mejora.</p>
+    <section class="grid">
+      <article>
+        <img src="img/m1.jpg" alt="Tradición repostera del Perú y de Puno" />
+        <div class="body">
+          <span class="num">Módulo 1</span>
+          <h2>Tradición repostera del Perú y de Puno</h2>
+          <p>Dulces de la costa, la sierra y Puno: api, humitas, buñuelos y lo que se prepara en casa.</p>
+        </div>
+      </article>
+      <article>
+        <img src="img/m2.jpg" alt="Ingredientes locales y productos andinos" />
+        <div class="body">
+          <span class="num">Módulo 2</span>
+          <h2>Ingredientes locales y productos andinos</h2>
+          <p>Quinua, kañiwa, miel, frutas y harinas de la zona: para qué sirven y cómo se eligen.</p>
+        </div>
+      </article>
+      <article>
+        <img src="img/m3.jpg" alt="Higiene y manipulación segura de alimentos" />
+        <div class="body">
+          <span class="num">Módulo 3</span>
+          <h2>Higiene y manipulación segura de alimentos</h2>
+          <p>Manos limpias, cabello recogido y utensilios limpios. Preparar sin contaminar.</p>
+        </div>
+      </article>
+      <article>
+        <img src="img/m4.jpg" alt="Medidas, proporciones y técnicas básicas" />
+        <div class="body">
+          <span class="num">Módulo 4</span>
+          <h2>Medidas, proporciones y técnicas básicas</h2>
+          <p>Pesar, medir y mezclar. Entender por qué una receta cambia si varía la cantidad.</p>
+        </div>
+      </article>
+      <article>
+        <img src="img/m5.jpg" alt="Creación de una receta artesanal" />
+        <div class="body">
+          <span class="num">Módulo 5</span>
+          <h2>Creación de una receta artesanal</h2>
+          <p>Armar una receta propia, simple y repetible, con ingredientes que se consiguen en Puno.</p>
+        </div>
+      </article>
+      <article>
+        <img src="img/m6.jpg" alt="Rendimiento, costos y precio del producto" />
+        <div class="body">
+          <span class="num">Módulo 6</span>
+          <h2>Rendimiento, costos y precio del producto</h2>
+          <p>Calcular cuánto sale cada porción y poner un precio que cubra ingredientes y trabajo.</p>
+        </div>
+      </article>
+      <article>
+        <img src="img/m7.jpg" alt="Identidad, envase y presentación" />
+        <div class="body">
+          <span class="num">Módulo 7</span>
+          <h2>Identidad, envase y presentación</h2>
+          <p>Elegir nombre, envase y forma de mostrar el producto de manera clara y honesta.</p>
+        </div>
+      </article>
+      <article>
+        <img src="img/m8.jpg" alt="Muestra y mejora de la propuesta" />
+        <div class="body">
+          <span class="num">Módulo 8</span>
+          <h2>Muestra y mejora de la propuesta</h2>
+          <p>Presentar la receta al aula, escuchar opiniones y ajustar lo que se puede mejorar.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer>Sílabo · Julma Gil Chambi · María Manueliz Peralta Machaca · Repostería artesanal</footer>
+</body>
+</html>
